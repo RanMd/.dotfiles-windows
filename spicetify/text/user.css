@@ -68,6 +68,13 @@
     --nav-bar-margin-left: 60px;
     --nav-bar-margin-right: 140px;
     --window-controls-top-start: 16px;
+
+    --content-main: 'Principal';
+    --content-library: 'Libreria';
+    --content-playing: 'Reproduciendo';
+    --content-sidebar: 'Detalles';
+    --content-search: 'Buscar';
+    --content-pages: 'Paginas';
 }
 
 /* font */
@@ -377,28 +384,28 @@ div[style*="--text-subdued: rgba(255, 255, 255, 0.7);"] {
 }
     form
     div:has(> .main-topBar-searchBar:focus)::before {
-    content: "Buscar";
+    content: var(--content-search);
     color: var(--spice-border-active) !important;
 }
 .Root__nav-bar
     .main-yourLibraryX-entryPoints:has(.main-yourLibraryX-navItems)::before {
-    content: "Pages";
+    content: var(--content-pages);
 }
 .Root__nav-bar
     .main-yourLibraryX-entryPoints:has(
         .main-yourLibraryX-libraryContainer
     )::before {
-    content: "Libreria";
+    content: var(--content-library) ;
 }
 .Root__main-view::before {
-    content: "Principal";
+    content: var(--content-main);
     position: fixed;
 }
 .Root__now-playing-bar::before {
-    content: "Reproduciendo";
+    content: var(--content-playing);
 }
 .Root__right-sidebar:has(aside:not(:empty))::before {
-    content: "Detalles";
+    content: var(--content-sidebar);
 }
 .Root__globalNav:hover::before,
 .Root__nav-bar .main-yourLibraryX-entryPoints:hover::before,
