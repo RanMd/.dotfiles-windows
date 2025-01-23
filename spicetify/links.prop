@@ -1,0 +1,3 @@
+$DOTFILES/spicetify/config-xpui.ini=$env:APPDATA/spicetify/config-xpui.ini
+$DOTFILES/spicetify/text/user.css=$env:APPDATA/spicetify/Themes/text/user.css
+$DOTFILES/spicetify/text/color.ini=$env:APPDATA/spicetify/Themes/text/color.ini
