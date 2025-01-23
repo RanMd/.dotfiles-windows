@@ -63,11 +63,9 @@
     --border-transition: 0.2s ease; /* 'none' to disable  */
     
     /*Custom variables*/
-    --window-controls-height: 32px;
     --nav-bar-margin-top: 0;
-    --nav-bar-margin-left: 60px;
-    --nav-bar-margin-right: 140px;
-    --window-controls-top-start: 16px;
+    --nav-bar-margin-left: 0;
+    --nav-bar-margin-right: 0;
 
     --content-main: 'Principal';
     --content-library: 'Libreria';
@@ -912,19 +910,4 @@ button[data-testid="control-button-repeat"][aria-checked="mixed"]::after {
 }
 .main-connectBar-connectBar svg {
     fill: var(--spice-accent-active);
-}
-.spotify__container--is-desktop:not(.fullscreen) body::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: var(--window-controls-top-start);
-    z-index: 999;
-    backdrop-filter: brightness(2.12);
-    /* page zoom [ctrl][+] or [ctrl][-]
-       edit width and height accordingly */
-    width: 135px;
-    /* depending on what global status bar
-       style is enabled height need to be
-       changed accordingly. */
-    height: var(--window-controls-height);
 }
