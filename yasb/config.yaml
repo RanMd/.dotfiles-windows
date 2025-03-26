@@ -16,7 +16,7 @@ bars:
       position: "top"
       center: false
     blur_effect:
-      enabled: false 
+      enabled: True 
       acrylic: false 
       dark_mode: false
       round_corners: false
@@ -35,7 +35,7 @@ bars:
     widgets:
       left: ["active_window"]
       center: ["clock"]
-      right: ["media","wifi","bluetooth","volume","power_menu"]
+      right: ["media","libre_gpu","wifi","bluetooth","volume","power_menu"]
 widgets:
   media:
       type: "yasb.media.MediaWidget"
@@ -133,3 +133,36 @@ widgets:
         on_left: "toggle_label"
         on_middle: "exec wifi_settings"
         on_right: "exec cmd.exe /c start ms-settings:network"
+  libre_gpu:
+    type: "yasb.libre_monitor.LibreHardwareMonitorWidget"
+    options:
+      label: "{info[value]}"
+      label_alt: "CPU"
+      sensor_id: "/intelcpu/0/temperature/0"
+      update_interval: 1000
+      precision: 0
+      histogram_num_columns: 10
+      class_name: "libre-monitor-widget"
+
+      history_size: 60
+      histogram_icons:
+        - '\u2581' # 0%
+        - '\u2581' # 10%
+        - '\u2582' # 20%
+        - '\u2583' # 30%
+        - '\u2584' # 40%
+        - '\u2585' # 50%
+        - '\u2586' # 60%
+        - '\u2587' # 70%
+        - '\u2588' # 80%+
+
+      # histogram_fixed_min: 0.0
+      # histogram_fixed_max: 100.0
+
+      server_host: "localhost"
+      server_port: 8085
+
+      callbacks:
+        on_left: "toggle_label"
+        on_middle: "do_nothing"
+        on_right: "do_nothing"

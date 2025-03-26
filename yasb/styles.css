@@ -40,7 +40,7 @@
 .yasb-bar {
 	padding: 0 5px;
 	margin: 0;
-  background-color: var(--base);
+  background-color: rgba(19, 19, 19, 0.9);
 }
 .widget {
 	padding: 0 8px;
@@ -181,4 +181,9 @@
   color: var(--white);
   font-size: 13px;
 }
-
+.libre-monitor-widget {
+  padding: 0 4px 0 9px; 
+}
+.libre-monitor-widget .widget-container .label {
+  color: var(--white)
+}
