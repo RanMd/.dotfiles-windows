@@ -72,11 +72,6 @@ winget
 
 success "VSCode instalado correctamente"
 
-# Oh my posh
-winget install JanDeDobbeleer.OhMyPosh -s winget
-
-success "Oh my posh instalado correctamente"
-
 # Git
 winget install -e --id Git.Git
 
@@ -88,10 +83,10 @@ winget install "Flow Launcher"
 success "Flow Launcher instalado correctamente"
 
 # Spicetify
-iwr -useb https://raw.githubusercontent.com/spicetify/cli/main/install.ps1 | iex
-iwr -useb https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.ps1 | iex
-
-success "Spicetify instalado correctamente"
+#iwr -useb https://raw.githubusercontent.com/spicetify/cli/main/install.ps1 | iex
+#iwr -useb https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.ps1 | iex
+#
+#success "Spicetify instalado correctamente"
 
 # Scoop
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
@@ -117,4 +112,6 @@ scoop install main/neovim
 
 suceess "Neovim instalado correctamente"
 
-
+## Oh my posh
+#
+#success "Oh my posh instalado correctamente"
